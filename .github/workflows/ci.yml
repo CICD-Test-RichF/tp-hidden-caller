@@ -1,0 +1,10 @@
+name: ci
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  security:
+    uses: ghassess-nonexistent-org-zz9/private-templates/.github/workflows/scan.yml@main
+    with:
+      run_semgrep: true
+      run_gitleaks: true
